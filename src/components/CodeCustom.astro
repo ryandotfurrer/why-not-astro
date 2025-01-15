@@ -1,0 +1,26 @@
+---
+import { Code } from 'astro:components';
+import type { BundledLanguage } from 'shiki';
+
+interface Props {
+  code: string;
+  lang: BundledLanguage;
+  theme?: string;
+  wrap?: boolean;
+  class?: string;
+}
+
+const { 
+  code,
+  lang,
+  class: clases,
+} = Astro.props;
+---
+
+<Code
+  code={code}
+  lang={lang}
+  theme="houston"
+  wrap
+  class={`p-8 mt-8 rounded-lg ${clases}`}
+/>

@@ -1,11 +1,19 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Buttons from '../components/sections/Buttons.astro';
+import Heading from '../components/Heading.astro';
+import Headings from '../components/sections/Headings.astro';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title="Why Not Astro?">
+	<hgroup class="py-24 text-balance space-y-2">
+		<Heading level="h1" size="4xl">Why Not Astro? 🚀</Heading>
+		<p class="text-xl leading-tight">
+			Astro is a static site builder that is fast, flexible, and easy to use. Best of all, you can use it with your favorite frameworks.
+		</p>
+	</hgroup>
+	<main class="space-y-12">
+		<Headings />
+		<Buttons />
+	</main>
+</BaseLayout>

@@ -1,0 +1,21 @@
+---
+import Button from "../Button.astro";
+import GarbageIcon from "../icons/GarbageIcon.astro";
+import Heading from "../Heading.astro";
+import SuccessIcon from "../icons/SuccessIcon.astro";
+import WarningIcon from "../icons/WarningIcon.astro";
+---
+
+<section class="space-y-4">
+    <Heading level="h2" size="3xl">Buttons</Heading>
+    <div class="flex gap-4 flex-wrap">
+        <Button>Default</Button>
+        <Button variant="destructive"><GarbageIcon />Destructive</Button>
+        <Button variant="warning"><WarningIcon />Warning</Button>
+        <Button variant="success"><SuccessIcon />Success</Button>
+        <Button variant="outline">Outline</Button>
+        <Button variant="secondary">Secondary</Button>
+        <Button variant="ghost">Ghost</Button>
+        <Button variant="link">Link</Button>
+    </div>
+</section>

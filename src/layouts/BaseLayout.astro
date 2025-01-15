@@ -1,0 +1,23 @@
+---
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Why Not Astro?</title>
+	</head>
+	<body class="bg-background text-muted-foreground font-sans">
+		<div class="container p-4 max-w-screen-lg mx-auto text-pretty">
+			<Navbar />
+			<slot />
+			<Footer />
+		</div>
+	</body>
+</html>
