@@ -5,15 +5,15 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Heading from "../../components/Heading.astro";
 
 export async function getStaticPaths() {
- const posts = await getCollection("blog");
- return posts.map((post: CollectionEntry<"blog">) => ({
-  params: { slug: post.slug },
-  props: { post },
- }));
+  const posts = await getCollection("blog");
+  return posts.map((post: CollectionEntry<"blog">) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
 }
 
 interface Props {
- post: CollectionEntry<"blog">;
+  post: CollectionEntry<"blog">;
 }
 
 const { post } = Astro.props;
@@ -21,22 +21,26 @@ const { Content } = await post.render();
 ---
 
 <BaseLayout title={`${post.data.title} | Why Not Astro?`}>
- <article class="space-y-[1em] prose">
-  <hgroup class="pt-24">
-   <Heading level="h1" size="4xl">{post.data.title}</Heading>
-   <div class="text-sm my-2">
-    <p>by {post.data.author}</p>
-    <p>
-     {
-      post.data.pubDate.toLocaleDateString("en-US", {
-       year: "numeric",
-       month: "long",
-       day: "numeric",
-      })
-     }
-    </p>
-   </div>
-  </hgroup>
-  <Content />
- </article>
+  <article class="space-y-[1em] prose">
+    <hgroup class="pt-24">
+      <Heading
+        level="h1"
+        size="4xl"
+        >{post.data.title}</Heading
+      >
+      <div class="text-sm my-2">
+        <p>by {post.data.author}</p>
+        <p>
+          {
+            post.data.pubDate.toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })
+          }
+        </p>
+      </div>
+    </hgroup>
+    <Content />
+  </article>
 </BaseLayout>

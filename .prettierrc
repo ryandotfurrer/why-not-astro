@@ -1,16 +1,18 @@
 {
- "printWidth": 100,
- "semi": true,
- "singleQuote": false,
- "tabWidth": 1,
- "trailingComma": "es5",
- "plugins": ["prettier-plugin-astro"],
- "overrides": [
-  {
-   "files": "*.astro",
-   "options": {
-    "parser": "astro"
-   }
-  }
- ]
+  "bracketSameLine": true,
+  "printWidth": 80,
+  "semi": true,
+  "tabWidth": 2,
+  "semicolons": true,
+  "singleAttributePerLine": true,
+  "vueIndentScriptAndStyle": true,
+  "plugins": ["prettier-plugin-astro"],
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    }
+  ]
 }

@@ -8,14 +8,17 @@ import CounterSection from "../components/sections/CounterSection.astro";
 const title = "Why Not Astro? 🚀";
 const pageTitle = `${title}`;
 const description =
- "Astro is a static site builder that is fast, flexible, and easy to use. Best of all, you can use it with your favorite frameworks.";
+  "Astro is a static site builder that is fast, flexible, and easy to use. Best of all, you can use it with your favorite frameworks.";
 ---
 
 <BaseLayout title={title}>
- <HGroup pageTitle={pageTitle} pageDescription={description} />
- <main class="space-y-12">
-  <HeadingsSection />
-  <ButtonsSection />
-  <CounterSection />
- </main>
+  <HGroup
+    pageTitle={pageTitle}
+    pageDescription={description}
+  />
+  <main class="space-y-12">
+    <HeadingsSection />
+    <ButtonsSection />
+    <CounterSection />
+  </main>
 </BaseLayout>

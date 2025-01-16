@@ -5,12 +5,16 @@ const year = new Date().getFullYear();
 ---
 
 <footer class="mt-24 py-8 border-t border-border">
- <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-  <p class="text-sm">
-   © {year} Why Not Astro? All rights reserved.
-  </p>
-  <p class="text-sm">
-   by <Link href="https://ryanfurrer.com/" externalLink={true}>Ryan Furrer</Link>
-  </p>
- </div>
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <p class="text-sm">
+      © {year} Why Not Astro? All rights reserved.
+    </p>
+    <p class="text-sm">
+      by <Link
+        href="https://ryanfurrer.com/"
+        externalLink={true}
+        >Ryan Furrer</Link
+      >
+    </p>
+  </div>
 </footer>

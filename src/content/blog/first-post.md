@@ -4,7 +4,8 @@ description: "Learn how to build lightning-fast websites with Astro's innovative
 pubDate: 2024-02-01
 author: "Ryan Furrer"
 tags: ["astro", "web development", "tutorial"]
-image: { url: "../../assets/blog-images/why-not-astro.png", alt: "Why not Astro?" }
+image:
+  { url: "../../assets/blog-images/why-not-astro.png", alt: "Why not Astro?" }
 ---
 
 ![Why Not Astro?](../../assets/blog-images/why-not-astro.png)

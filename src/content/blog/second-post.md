@@ -5,10 +5,10 @@ pubDate: 2024-02-15
 author: "Ryan Furrer"
 tags: ["astro", "performance", "architecture"]
 image:
- {
-  url: "../../assets/blog-images/astro-islands.jpg",
-  alt: "Islands floating in the cosmos; a literal depiction of Astro Islands",
- }
+  {
+    url: "../../assets/blog-images/astro-islands.jpg",
+    alt: "Islands floating in the cosmos; a literal depiction of Astro Islands",
+  }
 ---
 
 ![Islands floating in the cosmos; a literal depiction of Astro Islands](../../assets/blog-images/astro-islands.jpg)

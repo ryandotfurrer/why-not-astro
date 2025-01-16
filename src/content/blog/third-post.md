@@ -4,7 +4,11 @@ description: "Learn how to integrate and use Tailwind CSS effectively in your As
 pubDate: 2024-03-01
 author: "Ryan Furrer"
 tags: ["astro", "tailwind", "css"]
-image: { url: "../../assets/blog-images/tailwind-x-astro.png", alt: "Tailwind CSS and Astro" }
+image:
+  {
+    url: "../../assets/blog-images/tailwind-x-astro.png",
+    alt: "Tailwind CSS and Astro",
+  }
 ---
 
 ![Tailwind CSS and Astro](../../assets/blog-images/tailwind-x-astro.png)

@@ -3,19 +3,19 @@ import { Code } from "astro:components";
 import type { BundledLanguage } from "shiki";
 
 interface Props {
- code: string;
- lang: BundledLanguage;
- theme?: string;
- wrap?: boolean;
- class?: string;
+  code: string;
+  lang: BundledLanguage;
+  theme?: string;
+  wrap?: boolean;
+  class?: string;
 }
 
 const { code, lang, class: clases } = Astro.props;
 ---
 
 <Code
- code={code}
- lang={lang}
- theme="houston"
- class={`p-4 lg:p-8 text-sm md:text-base mt-8 rounded-lg ${clases}`}
+  code={code}
+  lang={lang}
+  theme="houston"
+  class={`p-4 lg:p-8 text-sm md:text-base mt-8 rounded-lg ${clases}`}
 />

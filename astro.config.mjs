@@ -8,26 +8,26 @@ import tailwind from "@astrojs/tailwind";
 import vue from "@astrojs/vue";
 
 export default defineConfig({
- markdown: {
-  syntaxHighlight: "shiki",
-  shikiConfig: {
-   theme: "houston",
-   wrap: true,
+  markdown: {
+    syntaxHighlight: "shiki",
+    shikiConfig: {
+      theme: "houston",
+      wrap: true,
+    },
   },
- },
- integrations: [
-  tailwind(),
-  alpinejs(),
-  preact({
-   include: ["**/preact/*"],
-  }),
-  react({
-   include: ["**/react/*"],
-  }),
-  solidJs({
-   include: ["**/solid/*"],
-  }),
-  svelte(),
-  vue(),
- ],
+  integrations: [
+    tailwind(),
+    alpinejs(),
+    preact({
+      include: ["**/preact/*"],
+    }),
+    react({
+      include: ["**/react/*"],
+    }),
+    solidJs({
+      include: ["**/solid/*"],
+    }),
+    svelte(),
+    vue(),
+  ],
 });

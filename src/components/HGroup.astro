@@ -2,14 +2,18 @@
 import Heading from "./Heading.astro";
 
 interface Props {
- pageTitle: string;
- pageDescription?: string;
+  pageTitle: string;
+  pageDescription?: string;
 }
 
 const { pageTitle, pageDescription } = Astro.props;
 ---
 
 <hgroup class="py-24 text-balance space-y-2">
- <Heading level="h1" size="4xl">{pageTitle}</Heading>
- {pageDescription && <p class="text-xl leading-tight">{pageDescription}</p>}
+  <Heading
+    level="h1"
+    size="4xl"
+    >{pageTitle}</Heading
+  >
+  {pageDescription && <p class="text-xl leading-tight">{pageDescription}</p>}
 </hgroup>
