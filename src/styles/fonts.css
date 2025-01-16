@@ -1,20 +1,20 @@
 @font-face {
-  font-family: 'Fraunces';
-  src: url('/fonts/Fraunces.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+ font-family: "Fraunces";
+ src: url("/fonts/Fraunces.ttf") format("truetype");
+ font-weight: normal;
+ font-style: normal;
 }
 
 @font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-} 
+ font-family: "Inter";
+ src: url("/fonts/Inter.ttf") format("truetype");
+ font-weight: normal;
+ font-style: normal;
+}
 
 @font-face {
-  font-family: 'GeistMono';
-  src: url('/fonts/GeistMono.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+ font-family: "GeistMono";
+ src: url("/fonts/GeistMono.ttf") format("truetype");
+ font-weight: normal;
+ font-style: normal;
 }

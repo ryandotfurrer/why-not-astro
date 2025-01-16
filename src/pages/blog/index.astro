@@ -1,38 +1,44 @@
 ---
-import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Heading from '../../components/Heading.astro';
-import Link from '../../components/Link.astro';
-import type { CollectionEntry } from 'astro:content';
-import HGroup from '../../components/HGroup.astro';
-const title = 'writing';
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Heading from "../../components/Heading.astro";
+import Link from "../../components/Link.astro";
+import type { CollectionEntry } from "astro:content";
+import HGroup from "../../components/HGroup.astro";
+const title = "writing";
 const pageTitle = `${title}`;
 const description = `Astro's Content Layer API is a powerful tool for building content-heavy static sites that allow you to manage your content from many different sources easily.`;
 
-const posts = await getCollection('blog');
-posts.sort((a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts = await getCollection("blog");
+posts.sort(
+ (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
+  b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
 ---
 
 <BaseLayout title={title}>
-  <HGroup pageTitle={pageTitle.toLowerCase()} pageDescription={description} />
-  <main class="space-y-8">
-    <Heading level="h1" size="4xl">Blog</Heading>
-    <div class="grid gap-8">
-      {posts.map((post: CollectionEntry<'blog'>) => (
-        <article class="space-y-2">
-          <Heading level="h2" size="2xl">
-            <Link href={`/blog/${post.slug}`}>{post.data.title}</Link>
-          </Heading>
-          <p class="text-sm">
-            {post.data.pubDate.toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric'
-            })}
-          </p>
-          <p>{post.data.description}</p>
-        </article>
-      ))}
-    </div>
-  </main>
-</BaseLayout> 
+ <HGroup pageTitle={pageTitle.toLowerCase()} pageDescription={description} />
+ <main class="space-y-8">
+  <Heading level="h1" size="4xl">Blog</Heading>
+  <div class="grid gap-8">
+   {
+    posts.map((post: CollectionEntry<"blog">) => (
+     <article class="space-y-2">
+      <Heading level="h2" size="2xl">
+       <Link href={`/blog/${post.slug}`}>{post.data.title}</Link>
+      </Heading>
+      <p class="text-sm">
+       {post.data.pubDate.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+       })}
+      </p>
+      <p>{post.data.description}</p>
+     </article>
+    ))
+   }
+  </div>
+ </main>
+</BaseLayout>
+

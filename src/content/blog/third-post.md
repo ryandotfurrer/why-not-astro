@@ -4,18 +4,16 @@ description: "Learn how to integrate and use Tailwind CSS effectively in your As
 pubDate: 2024-03-01
 author: "Ryan Furrer"
 tags: ["astro", "tailwind", "css"]
-image: {
-    url: "../../assets/blog-images/tailwind-x-astro.png",
-    alt: "Tailwind CSS and Astro"
-}
+image: { url: "../../assets/blog-images/tailwind-x-astro.png", alt: "Tailwind CSS and Astro" }
 ---
+
 ![Tailwind CSS and Astro](../../assets/blog-images/tailwind-x-astro.png)
 
 Tailwind CSS and Astro make a powerful combination for building modern websites. Let's explore how to use them together effectively.
 
 ## Setting Up Tailwind
 
-Astro makes it easy to add Tailwind CSS to your project: 
+Astro makes it easy to add Tailwind CSS to your project:
 
 ```bash
 npx astro add tailwind

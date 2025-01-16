@@ -4,10 +4,11 @@ description: "Deep dive into Astro's component islands architecture and how it i
 pubDate: 2024-02-15
 author: "Ryan Furrer"
 tags: ["astro", "performance", "architecture"]
-image: {
-    url: "../../assets/blog-images/astro-islands.jpg",
-    alt: "Islands floating in the cosmos; a literal depiction of Astro Islands"
-}
+image:
+ {
+  url: "../../assets/blog-images/astro-islands.jpg",
+  alt: "Islands floating in the cosmos; a literal depiction of Astro Islands",
+ }
 ---
 
 ![Islands floating in the cosmos; a literal depiction of Astro Islands](../../assets/blog-images/astro-islands.jpg)
@@ -27,4 +28,4 @@ Islands are interactive UI components in an otherwise static HTML page. They ena
 1. Better performance
 2. Reduced JavaScript overhead
 3. Improved user experience
-4. Flexible development approach 
+4. Flexible development approach
