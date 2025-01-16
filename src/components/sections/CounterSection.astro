@@ -8,7 +8,7 @@ import CounterSvelte from "../svelte/CounterSvelte.svelte";
 
 <div class="grid gap-12">
   <div class="border border-cyan-700 rounded-md p-4 bg-cyan-900">
-    <div class="lg:grid lg:grid-cols-3 lg:gap-4 items-center">
+    <div class="lg:grid lg:grid-cols-4 lg:gap-4 items-center">
       <div class="col-span-1">
         <Heading
           level="h2"
@@ -19,7 +19,7 @@ import CounterSvelte from "../svelte/CounterSvelte.svelte";
         <CounterReact client:visible />
       </div>
       <CodeCustom
-        class="col-span-2"
+        class="col-span-3"
         lang="jsx"
         code={`import { useState } from 'react';
 import MinusIconReact from './MinusIconReact.jsx';
@@ -62,7 +62,7 @@ export default Counter;
   </div>
 
   <div class="border border-green-700 rounded-md p-4 bg-green-900">
-    <div class="lg:grid lg:grid-cols-3 lg:gap-4 items-center">
+    <div class="lg:grid lg:grid-cols-4 lg:gap-4 items-center">
       <div class="col-span-1">
         <Heading
           level="h2"
@@ -73,7 +73,7 @@ export default Counter;
         <CounterVue client:visible />
       </div>
       <CodeCustom
-        class="col-span-2"
+        class="col-span-3"
         lang="vue"
         code={`<script setup>
 import { ref } from 'vue';
@@ -114,7 +114,7 @@ const decrement = () => {
     </div>
   </div>
   <div class="border border-orange-700 rounded-md p-4 bg-orange-900">
-    <div class="lg:grid lg:grid-cols-3 lg:gap-4 items-center">
+    <div class="lg:grid lg:grid-cols-4 lg:gap-4 items-center">
       <div class="col-span-1">
         <Heading
           level="h2"
@@ -125,7 +125,7 @@ const decrement = () => {
         <CounterSvelte client:visible />
       </div>
       <CodeCustom
-        class="col-span-2"
+        class="col-span-3"
         lang="svelte"
         code={`<script>
     import MinusIconSvelte from './MinusIconSvelte.svelte';
