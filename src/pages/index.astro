@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Buttons from '../components/sections/Buttons.astro';
-import Headings from '../components/sections/Headings.astro';
+import ButtonsSection from '../components/sections/ButtonsSection.astro';
+import HeadingsSection from '../components/sections/HeadingsSection.astro';
 import HGroup from '../components/HGroup.astro';
+import CounterSection from '../components/sections/CounterSection.astro';
 
 const title = 'Why Not Astro? 🚀';
 const pageTitle = `${title}`;
@@ -11,8 +12,9 @@ const description = 'Astro is a static site builder that is fast, flexible, and 
 <BaseLayout title={title}>
 	<HGroup pageTitle={pageTitle} pageDescription={description} />
 	<main class="space-y-12">
-		<Headings />
-		<Buttons />
+		<HeadingsSection />
+		<ButtonsSection />
+		<CounterSection  />
 	</main>
 </BaseLayout>
 	

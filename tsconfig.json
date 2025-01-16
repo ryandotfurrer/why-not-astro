@@ -2,8 +2,15 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "allowJs": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
   },
-  "exclude": ["dist"],
+  "exclude": [
+    "dist"
+  ],
   "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "**/*"],
+  "include": [
+    ".astro/types.d.ts",
+    "**/*"
+  ]
 }
