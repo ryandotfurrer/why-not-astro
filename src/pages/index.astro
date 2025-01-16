@@ -1,19 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Buttons from '../components/sections/Buttons.astro';
-import Heading from '../components/Heading.astro';
 import Headings from '../components/sections/Headings.astro';
----
+import HGroup from '../components/HGroup.astro';
 
-<BaseLayout title="Why Not Astro?">
-	<hgroup class="py-24 text-balance space-y-2">
-		<Heading level="h1" size="4xl">Why Not Astro? 🚀</Heading>
-		<p class="text-xl leading-tight">
-			Astro is a static site builder that is fast, flexible, and easy to use. Best of all, you can use it with your favorite frameworks.
-		</p>
-	</hgroup>
+const title = 'Why Not Astro? 🚀';
+const pageTitle = `${title}`;
+const description = 'Astro is a static site builder that is fast, flexible, and easy to use. Best of all, you can use it with your favorite frameworks.';
+---
+<BaseLayout title={title}>
+	<HGroup pageTitle={pageTitle} pageDescription={description} />
 	<main class="space-y-12">
 		<Headings />
 		<Buttons />
 	</main>
 </BaseLayout>
+	

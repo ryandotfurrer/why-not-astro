@@ -21,7 +21,7 @@ const { Content } = await post.render();
 ---
 
 <BaseLayout title={`${post.data.title} | Why Not Astro?`}>
-  <article class="space-y-[1em]">
+  <article class="space-y-[1em] prose">
     <hgroup class="pt-24">
       <Heading level="h1" size="4xl">{post.data.title}</Heading>
       <div class="text-sm my-2">

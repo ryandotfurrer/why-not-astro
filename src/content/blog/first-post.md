@@ -5,11 +5,11 @@ pubDate: 2024-02-01
 author: "Ryan Furrer"
 tags: ["astro", "web development", "tutorial"]
 image: {
-  url: "../../assets/why-not-astro.png",
-  alt: "Why Not Astro?"
+  url: "../../assets/blog-images/why-not-astro.png",
+  alt: "Why not Astro?"
 }
 ---
-![Why Not Astro?](../../assets/why-not-astro.png)
+![Why Not Astro?](../../assets/blog-images/why-not-astro.png)
 
 Astro is a modern static site builder that offers an innovative approach to web development. In this post, we'll explore the basics of getting started with Astro and why it might be the perfect choice for your next project.
 
