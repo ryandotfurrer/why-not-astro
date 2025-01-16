@@ -4,9 +4,12 @@ description: "Learn how to build lightning-fast websites with Astro's innovative
 pubDate: 2024-02-01
 author: "Ryan Furrer"
 tags: ["astro", "web development", "tutorial"]
+image: {
+  url: "../../assets/why-not-astro.png",
+  alt: "Why Not Astro?"
+}
 ---
-
-# Getting Started with Astro
+![Why Not Astro?](../../assets/why-not-astro.png)
 
 Astro is a modern static site builder that offers an innovative approach to web development. In this post, we'll explore the basics of getting started with Astro and why it might be the perfect choice for your next project.
 
@@ -26,5 +29,7 @@ To create your first Astro project, simply run:
 ```bash
 npm create astro@latest
 ```
+
+
 
 Stay tuned for more Astro tutorials! 

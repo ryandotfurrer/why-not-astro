@@ -82,4 +82,21 @@
     h6 {
         @apply text-base;
     }
+
+
+    :not(nav) > ul, :not(nav) > ol {
+      @apply list-inside ml-4;
+    }
+
+    :not(nav) > ul {
+      @apply list-disc;
+    }
+  
+    :not(nav) > ol {
+      @apply list-decimal;
+    }
+
+    pre {
+      @apply p-4 lg:p-8 text-sm md:text-base mt-8 rounded-lg;
+    }
 }
