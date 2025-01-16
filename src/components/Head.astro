@@ -1,6 +1,7 @@
 ---
 import Favicon from '/public/favicon.svg';
 const { title = 'Why Not Astro?', description = 'Astro is a modern static site builder that empowers developers to create fast, flexible, and user-friendly websites. Explore innovative features, tutorials, and resources to kickstart your web development journey with Astro.', ...props } = Astro.props;
+import OGImage from '/public/og-image.png';
 ---
 <link rel="sitemap" href="/sitemap-index.xml">
 
@@ -13,7 +14,7 @@ const { title = 'Why Not Astro?', description = 'Astro is a modern static site b
 <meta property="og:type" content="website">
 <meta property="og:title" content={title}>
 <meta property="og:description" content={description}>
-<meta property="og:image" content="https://opengraph.b-cdn.net/production/images/cbcdf8f9-a8b5-437e-b205-1330ec8a0efb.png?token=hZc_2urvt9gOMBgg19dnLcCeELBG0mKmdyhiJzlP77k&height=630&width=1200&expires=33273060323">
+<meta property="og:image" content={OGImage.src}>
 
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary_large_image">
@@ -21,6 +22,6 @@ const { title = 'Why Not Astro?', description = 'Astro is a modern static site b
 <meta property="twitter:url" content="https://whynotastro.vercel.app/">
 <meta name="twitter:title" content={title}>
 <meta name="twitter:description" content={description}>
-<meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/cbcdf8f9-a8b5-437e-b205-1330ec8a0efb.png?token=hZc_2urvt9gOMBgg19dnLcCeELBG0mKmdyhiJzlP77k&height=630&width=1200&expires=33273060323">
+<meta name="twitter:image" content={OGImage.src}>
 
 <link rel="icon" type="image/svg+xml" href={Favicon.src} />
