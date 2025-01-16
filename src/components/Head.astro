@@ -1,7 +1,7 @@
 ---
 import Favicon from '/public/favicon.svg';
 const { title = 'Why Not Astro?', description = 'Astro is a modern static site builder that empowers developers to create fast, flexible, and user-friendly websites. Explore innovative features, tutorials, and resources to kickstart your web development journey with Astro.', ...props } = Astro.props;
-import OGImage from '/public/og-image.png';
+const OGImage = 'https://whynotastro.vercel.app/_astro/og-image.BP6hiwxT_Z1pc4zD.webp';   
 ---
 <link rel="sitemap" href="/sitemap-index.xml">
 
@@ -14,7 +14,7 @@ import OGImage from '/public/og-image.png';
 <meta property="og:type" content="website">
 <meta property="og:title" content={title}>
 <meta property="og:description" content={description}>
-<meta property="og:image" content={OGImage.src}>
+<meta property="og:image" content={OGImage}>
 
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary_large_image">
@@ -22,6 +22,6 @@ import OGImage from '/public/og-image.png';
 <meta property="twitter:url" content="https://whynotastro.vercel.app/">
 <meta name="twitter:title" content={title}>
 <meta name="twitter:description" content={description}>
-<meta name="twitter:image" content={OGImage.src}>
+<meta name="twitter:image" content={OGImage}>
 
 <link rel="icon" type="image/svg+xml" href={Favicon.src} />
