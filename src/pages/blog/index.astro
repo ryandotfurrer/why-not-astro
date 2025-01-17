@@ -29,7 +29,7 @@ posts.sort(
     >
     <div class="grid gap-8">
       {
-        posts.map((post: CollectionEntry<"blog">) => (
+        posts.map((post: import("astro:content").CollectionEntry<"blog">) => (
           <article class="space-y-2">
             <Heading
               level="h2"
