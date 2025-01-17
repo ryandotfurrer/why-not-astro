@@ -25,7 +25,7 @@ export default defineConfig({
       include: ["**/react/*"],
     }),
     solidJs({
-      include: ["**/solid/*"],
+      include: ["**/solid/*", "**/node_modules/@suid/material/**"],
     }),
     svelte(),
     vue(),
