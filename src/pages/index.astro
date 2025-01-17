@@ -1,9 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ButtonsSection from "../components/sections/ButtonsSection.astro";
+import Heading from "../components/Heading.astro";
 import HeadingsSection from "../components/sections/HeadingsSection.astro";
 import HGroup from "../components/HGroup.astro";
 import CounterSection from "../components/sections/CounterSection.astro";
+import { Code } from "astro:components";
 
 const title = "Why Not Astro? 🚀";
 const pageTitle = `${title}`;
@@ -16,9 +18,27 @@ const description =
     pageTitle={pageTitle}
     pageDescription={description}
   />
-  <main class="space-y-12">
-    <HeadingsSection />
-    <ButtonsSection />
+  <main class="space-y-24">
+    <section>
+      <hgroup class="mb-12">
+        <Heading
+          level="h2"
+          size="2xl"
+          >Components? We've got 'em!</Heading
+        >
+        <p>
+          While not unique to Astro, you can build components in a
+          <Code
+            lang="bash"
+            code=".astro"
+            inline
+          />
+          file you would in any other framework.
+        </p>
+      </hgroup>
+      <HeadingsSection />
+      <ButtonsSection />
+    </section>
     <CounterSection />
   </main>
 </BaseLayout>
