@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 import Head from "../components/Head.astro";
+import { ClientRouter, slide } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -10,9 +11,12 @@ import Head from "../components/Head.astro";
   <head>
     <meta charset="UTF-8" />
     <Head />
+    <ClientRouter />
   </head>
   <body class="bg-background text-muted-foreground font-sans">
-    <div class="container p-4 max-w-screen-lg mx-auto text-pretty">
+    <div
+      transition:animate="slide"
+      class="container p-4 max-w-screen-lg mx-auto text-pretty">
       <Navbar />
       <slot />
       <Footer />

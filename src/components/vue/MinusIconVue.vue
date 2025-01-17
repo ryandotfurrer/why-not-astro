@@ -9,8 +9,7 @@
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
-    class="lucide lucide-plus">
+    class="lucide lucide-minus">
     <path d="M5 12h14" />
-    <path d="M12 5v14" />
   </svg>
 </template>
