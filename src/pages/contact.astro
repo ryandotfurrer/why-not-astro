@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactForm from "../components/react/ContactForm";
+import HGroup from "../components/HGroup.astro";
+
+const title = "Contact";
+const pageTitle = `${title}`;
+const description = "Get in touch with us";
+---
+
+<BaseLayout title={title}>
+  <HGroup
+    pageTitle={pageTitle}
+    pageDescription={description}
+  />
+  <main class="">
+    <ContactForm client:load />
+  </main>
+</BaseLayout>
