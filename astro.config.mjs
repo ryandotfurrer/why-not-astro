@@ -22,10 +22,11 @@ export default defineConfig({
       include: ["**/preact/*"],
     }),
     react({
+      experimentalReactChildren: true,
       include: ["**/react/*"],
     }),
     solidJs({
-      include: ["**/solid/*", "**/node_modules/@suid/material/**"],
+      include: ["**/solid/*"],
     }),
     svelte(),
     vue(),

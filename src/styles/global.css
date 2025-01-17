@@ -46,7 +46,7 @@
   }
 
   * {
-    @apply min-w-0;
+    @apply min-w-0 scroll-smooth;
   }
 
   h1,

@@ -1,16 +1,54 @@
 {
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist"],
   "compilerOptions": {
     "strictNullChecks": true,
     "allowJs": true,
-    "jsx": "preserve",
-    "jsxImportSource": "solid-js"
+    "jsx": "preserve"
   },
-  "exclude": [
-    "dist"
-  ],
-  "extends": "astro/tsconfigs/strict",
-  "include": [
-    ".astro/types.d.ts",
-    "**/*"
+  "overrides": [
+    {
+      "files": ["src/components/solid/**/*"],
+      "compilerOptions": {
+        "jsx": "preserve",
+        "jsxImportSource": "solid-js"
+      }
+    },
+    {
+      "files": ["src/components/preact/**/*"],
+      "compilerOptions": {
+        "jsx": "preserve",
+        "jsxImportSource": "preact"
+      }
+    },
+    {
+      "files": ["src/components/react/**/*"],
+      "compilerOptions": {
+        "jsx": "preserve",
+        "jsxImportSource": "react"
+      }
+    },
+    {
+      "files": ["src/components/vue/**/*"],
+      "compilerOptions": {
+        "jsx": "preserve",
+        "jsxImportSource": "vue"
+      }
+    },
+    {
+      "files": ["src/components/svelte/**/*"],
+      "compilerOptions": {
+        "jsx": "preserve",
+        "jsxImportSource": "svelte"
+      }
+    },
+    {
+      "files": ["src/components/alpine/**/*"],
+      "compilerOptions": {
+        "jsx": "preserve",
+        "jsxImportSource": "alpinejs"
+      }
+    }
   ]
 }

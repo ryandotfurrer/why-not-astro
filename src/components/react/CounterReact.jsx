@@ -5,11 +5,11 @@ import PlusIconReact from "./PlusIconReact.jsx";
 export default function CounterReact() {
   const [count, setCount] = useState(0);
 
-  const increment = () => {
+  const incrementReact = () => {
     setCount(count + 1);
   };
 
-  const decrement = () => {
+  const decrementReact = () => {
     setCount(count - 1);
   };
 
@@ -18,14 +18,14 @@ export default function CounterReact() {
       <p className="text-lg text-cyan-50">Counter: {count}</p>
       <div className="flex gap-2">
         <button
-          onClick={increment}
+          onClick={incrementReact}
           className="bg-success text-success-foreground px-4 py-2 rounded-sm">
           <PlusIconReact>
             <span className="sr-only">Increase count</span>
           </PlusIconReact>
         </button>
         <button
-          onClick={decrement}
+          onClick={decrementReact}
           className="bg-destructive text-destructive-foreground px-4 py-2 rounded-sm">
           <MinusIconReact>
             <span className="sr-only">Decrease count</span>

@@ -3,14 +3,16 @@ import CodeCustom from "../CodeCustom.astro";
 import CounterAlpine from "../alpinejs/CounterAlpine.html";
 import CounterPreact from "../preact/CounterPreact.jsx";
 import CounterReact from "../react/CounterReact.jsx";
-import CounterSolid from "../solidJs/CounterSolid.jsx";
+import CounterSolid from "../solid/CounterSolid.jsx";
 import CounterSvelte from "../svelte/CounterSvelte.svelte";
 import CounterVue from "../vue/CounterVue.vue";
 import Heading from "../Heading.astro";
 ---
 
-<div class="grid gap-12">
-  <div class="border border-cyan-700 rounded-md p-4 bg-cyan-900">
+<div class="grid gap-24">
+  <div
+    id="react"
+    class="border border-cyan-700 rounded-md p-4 bg-cyan-900 scroll-mt-12">
     <div class="lg:grid lg:grid-cols-4 lg:gap-4 items-center">
       <div class="col-span-1">
         <Heading
@@ -69,7 +71,9 @@ export default CounterReact;
     </div>
   </div>
 
-  <div class="border border-green-700 rounded-md p-4 bg-green-900">
+  <div
+    id="vue"
+    class="border border-green-700 rounded-md p-4 bg-green-900 scroll-mt-12">
     <div class="lg:grid lg:grid-cols-4 lg:gap-4 items-center">
       <div class="col-span-1">
         <Heading
@@ -126,7 +130,9 @@ export default CounterReact;
       />
     </div>
   </div>
-  <div class="border border-orange-700 rounded-md p-4 bg-orange-900">
+  <div
+    id="svelte"
+    class="border border-orange-700 rounded-md p-4 bg-orange-900 scroll-mt-12">
     <div class="lg:grid lg:grid-cols-4 lg:gap-4 items-center">
       <div class="col-span-1">
         <Heading
@@ -176,7 +182,9 @@ export default CounterReact;
     </div>
   </div>
 
-  <div class="border border-violet-700 rounded-md p-4 bg-violet-900">
+  <div
+    id="preact"
+    class="border border-violet-700 rounded-md p-4 bg-violet-900 scroll-mt-12">
     <div class="lg:grid lg:grid-cols-4 lg:gap-4 items-center">
       <div class="col-span-1">
         <Heading
@@ -235,7 +243,9 @@ export default CounterPreact;
     </div>
   </div>
 
-  <div class="border border-blue-700 rounded-md p-4 bg-blue-900">
+  <div
+    id="solid"
+    class="border border-blue-700 rounded-md p-4 bg-blue-900 scroll-mt-12">
     <div class="lg:grid lg:grid-cols-4 lg:gap-4 items-center">
       <div class="col-span-1">
         <Heading
@@ -253,14 +263,14 @@ export default CounterPreact;
 import MinusIconSolid from "./MinusIconSolid.jsx";
 import PlusIconSolid from "./PlusIconSolid.jsx";
 
-const CounterSolid = () => {
+export default function CounterSolid() {
   const [count, setCount] = createSignal(0);
 
-  const increment = () => {
+  const incrementSolid = () => {
     setCount(count() + 1);
   };
 
-  const decrement = () => {
+  const decrementSolid = () => {
     setCount(count() - 1);
   };
 
@@ -269,14 +279,14 @@ const CounterSolid = () => {
       <p className="text-lg text-blue-50">Counter: {count()}</p>
       <div className="flex gap-2">
         <button
-          onClick={increment}
+          onClick={incrementSolid}
           className="bg-success text-success-foreground px-4 py-2 rounded-sm">
           <PlusIconSolid>
             <span className="sr-only">Increase count</span>
           </PlusIconSolid>
         </button>
         <button
-          onClick={decrement}
+          onClick={decrementSolid}
           className="bg-destructive text-destructive-foreground px-4 py-2 rounded-sm">
           <MinusIconSolid>
             <span className="sr-only">Decrease count</span>
@@ -285,16 +295,17 @@ const CounterSolid = () => {
       </div>
     </div>
   );
-};
+}
 
-export default CounterSolid;
 
 `}
       />
     </div>
   </div>
 
-  <div class="border border-emerald-700 rounded-md p-4 bg-emerald-900">
+  <div
+    id="alpine"
+    class="border border-emerald-700 rounded-md p-4 bg-emerald-900 scroll-mt-12">
     <div class="lg:grid lg:grid-cols-4 lg:gap-4 items-center">
       <div class="col-span-1">
         <Heading
