@@ -2,7 +2,7 @@ import { useState } from "preact/hooks";
 import MinusIconPreact from "./MinusIconPreact.jsx";
 import PlusIconPreact from "./PlusIconPreact.jsx";
 
-const CounterPreact = () => {
+export default function CounterPreact() {
   const [count, setCount] = useState(0);
 
   const increment = () => {
@@ -34,6 +34,4 @@ const CounterPreact = () => {
       </div>
     </div>
   );
-};
-
-export default CounterPreact;
+}

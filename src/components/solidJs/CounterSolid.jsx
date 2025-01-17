@@ -2,7 +2,7 @@ import { createSignal } from "solid-js";
 import MinusIconSolid from "./MinusIconSolid.jsx";
 import PlusIconSolid from "./PlusIconSolid.jsx";
 
-const CounterSolid = () => {
+export default function CounterSolid() {
   const [count, setCount] = createSignal(0);
 
   const incrementSolid = () => setCount(count() + 1);
@@ -27,6 +27,4 @@ const CounterSolid = () => {
       </div>
     </div>
   );
-};
-
-export default CounterSolid;
+}
