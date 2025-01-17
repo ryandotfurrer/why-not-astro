@@ -2,7 +2,7 @@ import { useState } from "react";
 import MinusIconReact from "./MinusIconReact.jsx";
 import PlusIconReact from "./PlusIconReact.jsx";
 
-const Counter = () => {
+const CounterReact = () => {
   const [count, setCount] = useState(0);
 
   const increment = () => {
@@ -36,4 +36,4 @@ const Counter = () => {
   );
 };
 
-export default Counter;
+export default CounterReact;

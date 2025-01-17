@@ -4,6 +4,9 @@ import Heading from "../Heading.astro";
 import CounterVue from "../vue/CounterVue.vue";
 import CodeCustom from "../CodeCustom.astro";
 import CounterSvelte from "../svelte/CounterSvelte.svelte";
+import CounterPreact from "../preact/CounterPreact.jsx";
+import CounterSolid from "../solidJs/CounterSolid.jsx";
+import CounterAlpine from "../alpinejs/CounterAlpine.html";
 ---
 
 <div class="grid gap-12">
@@ -21,41 +24,46 @@ import CounterSvelte from "../svelte/CounterSvelte.svelte";
       <CodeCustom
         class="col-span-3"
         lang="jsx"
-        code={`import { useState } from 'react';
-import MinusIconReact from './MinusIconReact.jsx';
-import PlusIconReact from './PlusIconReact.jsx';
+        code={`import { useState } from "react";
+import MinusIconReact from "./MinusIconReact.jsx";
+import PlusIconReact from "./PlusIconReact.jsx";
 
-const Counter = () => {
-    const [count, setCount] = useState(0);
+const CounterReact = () => {
+  const [count, setCount] = useState(0);
 
-    const increment = () => {
-        setCount(count + 1);
-    };
+  const increment = () => {
+    setCount(count + 1);
+  };
 
-    const decrement = () => {
-        setCount(count - 1);
-    };
+  const decrement = () => {
+    setCount(count - 1);
+  };
 
-    return (
-        <div>
-            <p className='text-lg text-cyan-50'>Counter: {count}</p>
-            <div className='flex gap-2'>
-                <button onClick={increment} className='bg-success text-success-foreground px-4 py-2 rounded-sm'>
-                    <PlusIconReact>
-                        <span className="sr-only">Increase count</span>
-                    </PlusIconReact>
-                </button>
-                <button onClick={decrement} className='bg-destructive text-destructive-foreground px-4 py-2 rounded-sm'>
-                    <MinusIconReact>
-                        <span className="sr-only">Decrease count</span>
-                    </MinusIconReact>
-                </button>
-            </div>
-        </div>
-    );
+  return (
+    <div>
+      <p className="text-lg text-cyan-50">Counter: {count}</p>
+      <div className="flex gap-2">
+        <button
+          onClick={increment}
+          className="bg-success text-success-foreground px-4 py-2 rounded-sm">
+          <PlusIconReact>
+            <span className="sr-only">Increase count</span>
+          </PlusIconReact>
+        </button>
+        <button
+          onClick={decrement}
+          className="bg-destructive text-destructive-foreground px-4 py-2 rounded-sm">  
+          <MinusIconReact>
+            <span className="sr-only">Decrease count</span>
+          </MinusIconReact>
+        </button>
+      </div>
+    </div>
+  );
 };
 
-export default Counter;
+export default CounterReact;
+
 `}
       />
     </div>
@@ -76,38 +84,43 @@ export default Counter;
         class="col-span-3"
         lang="vue"
         code={`<script setup>
-import { ref } from 'vue';
-import PlusIconVue from './PlusIconVue.vue';
-import MinusIconVue from './MinusIconVue.vue';
+  import { ref } from "vue";
+  import PlusIconVue from "./PlusIconVue.vue";
+  import MinusIconVue from "./MinusIconVue.vue";
 
-const count = ref(0);
+  const count = ref(0);
 
-const increment = () => {
+  const increment = () => {
     count.value++;
-};
+  };
 
-const decrement = () => {
+  const decrement = () => {
     count.value--;
-};
+  };
 </script>
 
 <template>
-    <div>
-        <p class="text-lg text-green-50">Counter: {{ count }}</p>
-        <div class="flex gap-2">
-            <button class="bg-success text-success-foreground px-4 py-2 rounded-sm" @click="increment">
-                <PlusIconVue>
-                    <span class="sr-only">Increment</span> 
-            </PlusIconVue>
-        </button>
-        <button class="bg-destructive text-destructive-foreground px-4 py-2 rounded-sm" @click="decrement">
-            <MinusIconVue>
-                <span class="sr-only">Decrement</span>
-                </MinusIconVue>
-            </button>
-        </div>
+  <div>
+    <p class="text-lg text-green-50">Counter: {{ count }}</p>
+    <div class="flex gap-2">
+      <button
+        class="bg-success text-success-foreground px-4 py-2 rounded-sm"
+        @click="increment">
+        <PlusIconVue>
+          <span class="sr-only">Increment</span>
+        </PlusIconVue>
+      </button>
+      <button
+        class="bg-destructive text-destructive-foreground px-4 py-2 rounded-sm"
+        @click="decrement">
+        <MinusIconVue>
+          <span class="sr-only">Decrement</span>
+        </MinusIconVue>
+      </button>
     </div>
+  </div>
 </template>
+
 
 `}
       />
@@ -119,7 +132,7 @@ const decrement = () => {
         <Heading
           level="h2"
           size="2xl"
-          class="text-red-50"
+          class="text-orange-50"
           >Svelte</Heading
         >
         <CounterSvelte client:visible />
@@ -143,7 +156,7 @@ const decrement = () => {
 </script>
 
 <div>
-    <p class="text-lg text-cyan-50">Counter: {count}</p>
+    <p class="text-lg text-orange-50">Counter: {count}</p>
     <div class="flex gap-2">
         <button on:click={increment} class="bg-success text-success-foreground px-4 py-2 rounded-sm">
             <PlusIconSvelte>
@@ -156,6 +169,186 @@ const decrement = () => {
             </MinusIconSvelte>
         </button>
     </div>
+</div>
+
+`}
+      />
+    </div>
+  </div>
+
+  <div class="border border-violet-700 rounded-md p-4 bg-violet-900">
+    <div class="lg:grid lg:grid-cols-4 lg:gap-4 items-center">
+      <div class="col-span-1">
+        <Heading
+          level="h2"
+          size="2xl"
+          class="text-violet-50"
+          >Preact</Heading
+        >
+        <CounterPreact client:visible />
+      </div>
+      <CodeCustom
+        class="col-span-3"
+        lang="jsx"
+        code={`import { useState } from "preact/hooks";
+import MinusIconPreact from "./MinusIconPreact.jsx";
+import PlusIconPreact from "./PlusIconPreact.jsx";
+
+const CounterPreact = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  const decrement = () => {
+    setCount(count - 1);
+  };
+
+  return (
+    <div>
+      <p className="text-lg text-violet-50">Counter: {count}</p>
+      <div className="flex gap-2">
+        <button
+          onClick={increment}
+          className="bg-success text-success-foreground px-4 py-2 rounded-sm">
+          <PlusIconPreact>
+            <span className="sr-only">Increase count</span>
+          </PlusIconPreact>
+        </button>
+        <button
+          onClick={decrement}
+          className="bg-destructive text-destructive-foreground px-4 py-2 rounded-sm">
+          <MinusIconPreact>
+            <span className="sr-only">Decrease count</span>
+          </MinusIconPreact>
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default CounterPreact;
+
+`}
+      />
+    </div>
+  </div>
+
+  <div class="border border-blue-700 rounded-md p-4 bg-blue-900">
+    <div class="lg:grid lg:grid-cols-4 lg:gap-4 items-center">
+      <div class="col-span-1">
+        <Heading
+          level="h2"
+          size="2xl"
+          class="text-blue-50"
+          >Solid</Heading
+        >
+        <CounterSolid client:visible />
+      </div>
+      <CodeCustom
+        class="col-span-3"
+        lang="jsx"
+        code={`import { createSignal } from "solid-js";
+import MinusIconSolid from "./MinusIconSolid.jsx";
+import PlusIconSolid from "./PlusIconSolid.jsx";
+
+const CounterSolid = () => {
+  const [count, setCount] = createSignal(0);
+
+  const increment = () => {
+    setCount(count() + 1);
+  };
+
+  const decrement = () => {
+    setCount(count() - 1);
+  };
+
+  return (
+    <div>
+      <p className="text-lg text-blue-50">Counter: {count()}</p>
+      <div className="flex gap-2">
+        <button
+          onClick={increment}
+          className="bg-success text-success-foreground px-4 py-2 rounded-sm">
+          <PlusIconSolid>
+            <span className="sr-only">Increase count</span>
+          </PlusIconSolid>
+        </button>
+        <button
+          onClick={decrement}
+          className="bg-destructive text-destructive-foreground px-4 py-2 rounded-sm">
+          <MinusIconSolid>
+            <span className="sr-only">Decrease count</span>
+          </MinusIconSolid>
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default CounterSolid;
+
+`}
+      />
+    </div>
+  </div>
+
+  <div class="border border-emerald-700 rounded-md p-4 bg-emerald-900">
+    <div class="lg:grid lg:grid-cols-4 lg:gap-4 items-center">
+      <div class="col-span-1">
+        <Heading
+          level="h2"
+          size="2xl"
+          class="text-emerald-50"
+          >Alpine</Heading
+        >
+        <CounterAlpine client:visible />
+      </div>
+      <CodeCustom
+        class="col-span-3"
+        lang="html"
+        code={`<div x-data="{ count: 0 }">
+  <p class="text-lg text-emerald-50">Counter: <span x-text="count"></span></p>
+  <div class="flex gap-2">
+    <button
+      @click="count++"
+      class="bg-success text-success-foreground px-4 py-2 rounded-sm">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-plus">
+        <path d="M5 12h14" />
+        <path d="M12 5v14" />
+        <span class="sr-only">Increase count</span>
+      </svg>
+    </button>
+    <button
+      @click="count--"
+      class="bg-destructive text-destructive-foreground px-4 py-2 rounded-sm">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-minus">
+        <path d="M5 12h14" />
+        <span class="sr-only">Decrease count</span>
+      </svg>
+    </button>
+  </div>
 </div>
 
 `}
